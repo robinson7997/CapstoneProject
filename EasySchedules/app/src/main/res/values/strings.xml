@@ -1,0 +1,30 @@
+<resources>
+    //APP NAME
+    <string name="app_name">Easy Schedules</string>
+
+    //REGISTER LAYOUT
+    //Buttons
+    <string name="ContinueButton">Continue</string>
+    //Labels
+    <string name="FirstNameLB">First Name</string>
+    <string name="LastNameLB">Last Name</string>
+    <string name="UsernameLB">Username</string>
+    <string name="PasswordLB">Password</string>
+    <string name="EmailLB">Email Address</string>
+    <string name="PhoneNumberLB">Phone Number</string>
+    <string name="Title">Create an employee account</string>
+    //Links
+    <string name="ExisitingAccount">Already have an account? Login</string>
+
+    //LOGIN LAYOUT
+    //Buttons
+    <string name="LoginButton">Login</string>
+    //Labels
+    <string name="LoginLB">Login</string>
+    <string name="UsernameOrEmailLB">Username or Email Address</string>
+    <string name="PasswordLoginLB">Password</string>
+    //Links
+    <string name="RegisterUser">Register new user account</string>
+    <string name="RegisterOwner">Register new business owner account</string>
+
+</resources>
