@@ -13,7 +13,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="396dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
         android:ems="10"
         android:inputType="textPersonName|phone"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,7 +24,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="328dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
         android:ems="10"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +34,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
         android:layout_marginTop="348dp"
         android:text="@string/EmailLB"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +44,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
         android:layout_marginTop="420dp"
         android:text="@string/PhoneNumberLB"
         app:layout_constraintStart_toStartOf="parent"
@@ -58,7 +54,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
         android:layout_marginTop="272dp"
         android:text="@string/PasswordLB"
         app:layout_constraintStart_toStartOf="parent"
@@ -70,7 +65,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="260dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
         android:ems="10"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,7 +75,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
         android:layout_marginTop="204dp"
         android:text="@string/UsernameLB"
         app:layout_constraintStart_toStartOf="parent"
@@ -92,7 +85,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
         android:layout_marginTop="132dp"
         android:text="@string/LastNameLB"
         app:layout_constraintStart_toStartOf="parent"
@@ -104,7 +96,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,7 +107,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="188dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -139,7 +129,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
         android:layout_marginTop="56dp"
         android:text="@string/FirstNameLB"
         app:layout_constraintStart_toStartOf="parent"
@@ -151,7 +140,6 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginRight="20dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -175,12 +163,13 @@
         android:id="@+id/ContinueButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginBottom="86dp"
         android:text="@string/ContinueButton"
-        app:layout_constraintStart_toEndOf="@+id/PhoneNumberLB"
-        app:layout_constraintTop_toBottomOf="@+id/PhoneNumberTF" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ErrorLB"
+        app:layout_constraintStart_toStartOf="@+id/ErrorLB"
+        app:layout_constraintTop_toBottomOf="@+id/CompanyCodeTF" />
 
     <TextView
         android:id="@+id/ErrorLB"
@@ -190,5 +179,34 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ContinueButton" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        app:layout_constraintEnd_toStartOf="@+id/CompanyCodeLB"
+        app:layout_constraintStart_toStartOf="@+id/CompanyCodeLB"
+        app:layout_constraintTop_toBottomOf="@+id/PhoneNumberLB" />
+
+    <TextView
+        android:id="@+id/CompanyCodeLB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/CompanyCode"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toTopOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/CompanyCodeTF"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBaseline_toBaselineOf="@+id/CompanyCodeLB"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

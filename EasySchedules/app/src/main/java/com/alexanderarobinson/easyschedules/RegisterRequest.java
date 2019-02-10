@@ -11,9 +11,10 @@ public class RegisterRequest extends StringRequest {
     private static final String REGISTER_REQUEST_URL="http://alexanderarobinson.com/Register.php";
     private Map<String,String> params;
 
-    public RegisterRequest(String firstname, String lastname, String username, String password, String email, int phonenumber, Response.Listener<String> listener){
+    public RegisterRequest(String companyid,String firstname, String lastname, String username, String password, String email, int phonenumber, Response.Listener<String> listener){
         super(Method.POST, REGISTER_REQUEST_URL, listener, null);
         params = new HashMap<>();
+        params.put("companyid",companyid);
         params.put("firstname",firstname);
         params.put("lastname",lastname);
         params.put("username",username);

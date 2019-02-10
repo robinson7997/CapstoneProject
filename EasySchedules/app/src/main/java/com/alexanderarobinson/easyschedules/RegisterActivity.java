@@ -24,6 +24,7 @@ public class RegisterActivity extends AppCompatActivity{
         setContentView(R.layout.register_activity);
 
         //Grab all the user data from text fields to be registered
+        final EditText etCompanyId = (EditText) findViewById(R.id.CompanyCodeTF);
         final EditText etFirstName = (EditText) findViewById(R.id.FirstNameTF);
         final EditText etLastName = (EditText) findViewById(R.id.LastNameTF);
         final EditText etUsername= (EditText) findViewById(R.id.UsernameTF);
@@ -47,6 +48,7 @@ public class RegisterActivity extends AppCompatActivity{
                     bContinue.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            final String companyid = etCompanyId.getText().toString();
                             final String firstname = etFirstName.getText().toString();
                             final String lastname = etLastName.getText().toString();
                             final String username = etUsername.getText().toString();
@@ -81,7 +83,7 @@ public class RegisterActivity extends AppCompatActivity{
                                 }
                             };
                             //Add user data from text fields for register request and add to queue
-                            RegisterRequest registerRequest = new RegisterRequest(firstname, lastname, username, password, email, phonenumber, responseListener);
+                            RegisterRequest registerRequest = new RegisterRequest(companyid,firstname, lastname, username, password, email, phonenumber, responseListener);
                             RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
                             queue.add(registerRequest);
 
@@ -103,6 +105,7 @@ public class RegisterActivity extends AppCompatActivity{
                     bContinue.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            final String companyid = etCompanyId.getText().toString();
                             final String firstname = etFirstName.getText().toString();
                             final String lastname = etLastName.getText().toString();
                             final String username = etUsername.getText().toString();
@@ -137,7 +140,7 @@ public class RegisterActivity extends AppCompatActivity{
                                 }
                             };
                             //Add user data from text fields for register request and add to queue
-                            RegisterRequest registerRequest = new RegisterRequest(firstname, lastname, username, password, email, phonenumber, responseListener);
+                            RegisterRequest registerRequest = new RegisterRequest(companyid,firstname, lastname, username, password, email, phonenumber, responseListener);
                             RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
                             queue.add(registerRequest);
 
@@ -163,6 +166,7 @@ public class RegisterActivity extends AppCompatActivity{
                     bContinue.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            final String companyid = etCompanyId.getText().toString();
                             final String firstname = etFirstName.getText().toString();
                             final String lastname = etLastName.getText().toString();
                             final String username = etUsername.getText().toString();
@@ -197,7 +201,7 @@ public class RegisterActivity extends AppCompatActivity{
                                 }
                             };
                             //Add user data from text fields for register request and add to queue
-                            RegisterRequest registerRequest = new RegisterRequest(firstname, lastname, username, password, email, phonenumber, responseListener);
+                            RegisterRequest registerRequest = new RegisterRequest(companyid,firstname, lastname, username, password, email, phonenumber, responseListener);
                             RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
                             queue.add(registerRequest);
 
@@ -224,6 +228,7 @@ public class RegisterActivity extends AppCompatActivity{
                     bContinue.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            final String companyid = etCompanyId.getText().toString();
                             final String firstname = etFirstName.getText().toString();
                             final String lastname = etLastName.getText().toString();
                             final String username = etUsername.getText().toString();
@@ -258,7 +263,7 @@ public class RegisterActivity extends AppCompatActivity{
                                 }
                             };
                             //Add user data from text fields for register request and add to queue
-                            RegisterRequest registerRequest = new RegisterRequest(firstname, lastname, username, password, email, phonenumber, responseListener);
+                            RegisterRequest registerRequest = new RegisterRequest(companyid,firstname, lastname, username, password, email, phonenumber, responseListener);
                             RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
                             queue.add(registerRequest);
 
@@ -284,6 +289,7 @@ public class RegisterActivity extends AppCompatActivity{
                     bContinue.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            final String companyid = etCompanyId.getText().toString();
                             final String firstname = etFirstName.getText().toString();
                             final String lastname = etLastName.getText().toString();
                             final String username = etUsername.getText().toString();
@@ -318,7 +324,7 @@ public class RegisterActivity extends AppCompatActivity{
                                 }
                             };
                             //Add user data from text fields for register request and add to queue
-                            RegisterRequest registerRequest = new RegisterRequest(firstname, lastname, username, password, email, phonenumber, responseListener);
+                            RegisterRequest registerRequest = new RegisterRequest(companyid,firstname, lastname, username, password, email, phonenumber, responseListener);
                             RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
                             queue.add(registerRequest);
 
@@ -333,17 +339,13 @@ public class RegisterActivity extends AppCompatActivity{
         etPhoneNumber.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
-                if (etPhoneNumber.getText().length() < 1) {
-                    etPhoneNumber.setError("Phone number cannot be empty");
-                }
-                if (etPhoneNumber.getText().length() != 0 && etPhoneNumber.getText().length() < 10){
-                    etPhoneNumber.setError("Phone number cannot be less than 10 digits");
-                }
-                else {
+
+
                     //Continue button clicked
                     bContinue.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            final String companyid = etCompanyId.getText().toString();
                             final String firstname = etFirstName.getText().toString();
                             final String lastname = etLastName.getText().toString();
                             final String username = etUsername.getText().toString();
@@ -378,7 +380,7 @@ public class RegisterActivity extends AppCompatActivity{
                                 }
                             };
                             //Add user data from text fields for register request and add to queue
-                            RegisterRequest registerRequest = new RegisterRequest(firstname, lastname, username, password, email, phonenumber, responseListener);
+                            RegisterRequest registerRequest = new RegisterRequest(companyid,firstname, lastname, username, password, email, phonenumber, responseListener);
                             RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
                             queue.add(registerRequest);
 
@@ -386,7 +388,7 @@ public class RegisterActivity extends AppCompatActivity{
                     });
 
                 }
-            }
+
 
         });
 

@@ -13,6 +13,7 @@
     <string name="EmailLB">Email Address</string>
     <string name="PhoneNumberLB">Phone Number</string>
     <string name="Title">Create an employee account</string>
+    <string name="CompanyCode">Enter Company Code</string>
     //Links
     <string name="ExisitingAccount">Already have an account? Login</string>
 
@@ -26,5 +27,26 @@
     //Links
     <string name="RegisterUser">Register new user account</string>
     <string name="RegisterOwner">Register new business owner account</string>
+    <string name="title_activity_join_business">JoinBusinessActivity</string>
+    <string name="nav_home">Home</string>
+    <string name="nav_schedule">Schedule</string>
+    <string name="nav_connect">Connect</string>
+    <string name="availableshifts">Available Shifts</string>
+    <string name="CreateSchedule">Create Schedules</string>
+    <string name="ManageEmployees">Manage Employees</string>
+    <string name="ManageCompany">Manage Company</string>
+    <string name="CurrentWeek">Current Weeks Schedule</string>
+    <string name="NextWeek">Upcoming Weeks Schedule</string>
+    <string name="CreateScheduleTitle">Create new shift for current weeks schedule</string>
+    <string name="UserID">Employees ID</string>
+    <string name="Month">Month</string>
+    <string name="Day">Day</string>
+    <string name="StartTime">Start Time</string>
+    <string name="EndTime">End Time</string>
+    <string name="Submit">Submit</string>
+    <string name="Time">Time</string>
+    <string name="SelectMonth">Select Month</string>
+    <string name="SelectDay">Select Day</string>
+    <string name="SelectDate">Select Date</string>
 
 </resources>

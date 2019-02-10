@@ -4,42 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeActivity">
+    tools:context=".AdminHomeActivity">
 
     <TextView
         android:id="@+id/CompanyMessage"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="50dp"
-        android:gravity="center"
-        android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/UserInfo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/WelcomeMessage" />
-
-    <TextView
-        android:id="@+id/UserInfo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="498dp"
+        android:layout_marginBottom="526dp"
         android:gravity="center"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CompanyMessage" />
+        app:layout_constraintTop_toBottomOf="@+id/WelcomeMessage" />
 
     <TextView
         android:id="@+id/WelcomeMessage"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="59dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="31dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="37dp"
         android:gravity="center"
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/CompanyMessage"
@@ -59,9 +43,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/UserInfo"
-
         app:layout_constraintVertical_bias="1.0"
-        app:menu="@menu/nav_items" />
-
+        app:menu="@menu/admin_nav_items" />
 
 </android.support.constraint.ConstraintLayout>

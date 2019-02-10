@@ -14,6 +14,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -76,19 +77,41 @@ public class LoginActivity extends AppCompatActivity {
                                             String password = jsonResponse.getString("password");
                                             String email = jsonResponse.getString("email");
                                             int phonenumber = jsonResponse.getInt("phonenumber");
-                                            //Change intent to the home activity and put user data in intent
-                                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                                            intent.putExtra("user_id", user_id);
-                                            intent.putExtra("company_id", company_id);
-                                            intent.putExtra("job_id", job_id);
-                                            intent.putExtra("firstname", firstname);
-                                            intent.putExtra("lastname", lastname);
-                                            intent.putExtra("username", username);
-                                            intent.putExtra("password", password);
-                                            intent.putExtra("email", email);
-                                            intent.putExtra("phonenumber", phonenumber);
+                                            int permission_level = jsonResponse.getInt("permission_level");
 
-                                            LoginActivity.this.startActivity(intent);
+                                            String company_name = jsonResponse.getString("company_name");
+
+
+                                            if(permission_level == 3){
+                                                Intent intent = new Intent(LoginActivity.this, AdminHomeActivity.class);
+                                                intent.putExtra("user_id", user_id);
+                                                intent.putExtra("company_id", company_id);
+                                                intent.putExtra("job_id", job_id);
+                                                intent.putExtra("firstname", firstname);
+                                                intent.putExtra("lastname", lastname);
+                                                intent.putExtra("username", username);
+                                                intent.putExtra("password", password);
+                                                intent.putExtra("email", email);
+                                                intent.putExtra("phonenumber", phonenumber);
+                                                intent.putExtra("permission_level", permission_level);
+                                                intent.putExtra("company_name", company_name);
+                                                LoginActivity.this.startActivity(intent);
+                                            } else {
+                                                //Change intent to the home activity and put user data in intent
+                                                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                                                intent.putExtra("user_id", user_id);
+                                                intent.putExtra("company_id", company_id);
+                                                intent.putExtra("job_id", job_id);
+                                                intent.putExtra("firstname", firstname);
+                                                intent.putExtra("lastname", lastname);
+                                                intent.putExtra("username", username);
+                                                intent.putExtra("password", password);
+                                                intent.putExtra("email", email);
+                                                intent.putExtra("phonenumber", phonenumber);
+                                                intent.putExtra("permission_level", permission_level);
+                                                intent.putExtra("company_name", company_name);
+                                                LoginActivity.this.startActivity(intent);
+                                            }
 
                                         } else {
                                             AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
@@ -147,19 +170,41 @@ public class LoginActivity extends AppCompatActivity {
                                             String password = jsonResponse.getString("password");
                                             String email = jsonResponse.getString("email");
                                             int phonenumber = jsonResponse.getInt("phonenumber");
-                                            //Change intent to the home activity and put user data in intent
-                                            Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
-                                            intent.putExtra("user_id", user_id);
-                                            intent.putExtra("company_id", company_id);
-                                            intent.putExtra("job_id", job_id);
-                                            intent.putExtra("firstname", firstname);
-                                            intent.putExtra("lastname", lastname);
-                                            intent.putExtra("username", username);
-                                            intent.putExtra("password", password);
-                                            intent.putExtra("email", email);
-                                            intent.putExtra("phonenumber", phonenumber);
+                                            int permission_level = jsonResponse.getInt("permission_level");
 
-                                            LoginActivity.this.startActivity(intent);
+                                            String company_name = jsonResponse.getString("company_name");
+
+
+                                            if(permission_level == 3){
+                                                Intent intent = new Intent(LoginActivity.this, AdminHomeActivity.class);
+                                                intent.putExtra("user_id", user_id);
+                                                intent.putExtra("company_id", company_id);
+                                                intent.putExtra("job_id", job_id);
+                                                intent.putExtra("firstname", firstname);
+                                                intent.putExtra("lastname", lastname);
+                                                intent.putExtra("username", username);
+                                                intent.putExtra("password", password);
+                                                intent.putExtra("email", email);
+                                                intent.putExtra("phonenumber", phonenumber);
+                                                intent.putExtra("permission_level", permission_level);
+                                                intent.putExtra("company_name", company_name);
+                                                LoginActivity.this.startActivity(intent);
+                                            } else {
+                                                //Change intent to the home activity and put user data in intent
+                                                Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
+                                                intent.putExtra("user_id", user_id);
+                                                intent.putExtra("company_id", company_id);
+                                                intent.putExtra("job_id", job_id);
+                                                intent.putExtra("firstname", firstname);
+                                                intent.putExtra("lastname", lastname);
+                                                intent.putExtra("username", username);
+                                                intent.putExtra("password", password);
+                                                intent.putExtra("email", email);
+                                                intent.putExtra("phonenumber", phonenumber);
+                                                intent.putExtra("permission_level", permission_level);
+                                                intent.putExtra("company_name", company_name);
+                                                LoginActivity.this.startActivity(intent);
+                                            }
 
                                         } else {
                                             AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
