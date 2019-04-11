@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,6 +23,7 @@ public class LoginActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
 
@@ -34,7 +36,7 @@ public class LoginActivity extends AppCompatActivity {
         final TextView registerUserLink = (TextView) findViewById(R.id.RegisterUserLink);
         final TextView registerUserBusinessOwnerLink = (TextView) findViewById(R.id.RegisterBusinessAccountLink);
 
-        //Action listeners for links
+        //On click listener to register user page
         registerUserLink.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
@@ -42,6 +44,15 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        //On click listener to register business owner account page
+        registerUserBusinessOwnerLink.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent = new Intent(LoginActivity.this,RegisterOwnerActivity.class);
+                startActivity(intent);
+            }
+        });
+
         etUsername.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View v, boolean hasFocus) {
@@ -80,7 +91,6 @@ public class LoginActivity extends AppCompatActivity {
                                             int permission_level = jsonResponse.getInt("permission_level");
 
                                             String company_name = jsonResponse.getString("company_name");
-
 
                                             if(permission_level == 3){
                                                 Intent intent = new Intent(LoginActivity.this, AdminHomeActivity.class);

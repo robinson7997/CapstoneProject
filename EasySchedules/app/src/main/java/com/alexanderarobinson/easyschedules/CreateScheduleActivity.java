@@ -44,6 +44,9 @@ public class CreateScheduleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.create_schedule_activity);
 
+        Intent intent = getIntent();
+        final String company_id = intent.getIntExtra("company_id", -1)+"";
+
         //Grab all the shift data from text fields and text views to be created
         final EditText etUserId = (EditText) findViewById(R.id.EmployeeIdTF);
         final TextView etMonth = (TextView) findViewById(R.id.MonthLB);
@@ -60,6 +63,14 @@ public class CreateScheduleActivity extends AppCompatActivity {
         minute = currentTime.get(Calendar.MINUTE);
 
         selectedTimeFormat(hour);
+
+        if(hour == 0){
+            hour = hour + 12;
+        } else if(hour == 12){
+        } else if (hour > 12){
+            hour = hour - 12;
+        } else {
+        }
 
         etStartTime.setText(hour + " : " + minute + " "+ format);
         etEndTime.setText(hour + " : " + minute + " "+ format);
@@ -156,7 +167,7 @@ public class CreateScheduleActivity extends AppCompatActivity {
 
                             }else{
                                 AlertDialog.Builder builder = new AlertDialog.Builder(CreateScheduleActivity.this);
-                                builder.setMessage("Register failed")
+                                builder.setMessage("Creation failed")
                                         .setNegativeButton("Retry", null)
                                         .create()
                                         .show();
@@ -168,7 +179,7 @@ public class CreateScheduleActivity extends AppCompatActivity {
 
                     }
                 };
-                CreateScheduleRequest  createScheduleRequest = new CreateScheduleRequest(user_id,month,day,start_time,end_time,responseListener);
+                CreateScheduleRequest  createScheduleRequest = new CreateScheduleRequest(user_id,company_id,month,day,start_time,end_time,responseListener);
                 RequestQueue queue = Volley.newRequestQueue(CreateScheduleActivity.this);
                 queue.add(createScheduleRequest);
 

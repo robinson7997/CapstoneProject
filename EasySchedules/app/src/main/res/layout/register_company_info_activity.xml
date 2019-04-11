@@ -5,107 +5,83 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorDarkGrey"
-    tools:context=".RegisterActivity"
+    tools:context=".RegisterCompanyInfoActivity"
     tools:layout_editor_absoluteY="81dp">
 
     <EditText
-        android:id="@+id/PhoneNumberTF"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="396dp"
-        android:layout_marginEnd="20dp"
-        android:textColor="@android:color/white"
-        android:ems="10"
-        android:inputType="textPersonName|phone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/EmailTF"
+        android:id="@+id/TypeTF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="328dp"
         android:layout_marginEnd="20dp"
-        android:textColor="@android:color/white"
         android:ems="10"
+        android:textColor="@android:color/white"
         android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/EmailLB"
+        android:id="@+id/TypeLB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="348dp"
+        android:text="@string/TypeOfBusiness"
         android:textStyle="bold"
         android:textColor="@android:color/white"
-        android:text="@string/EmailLB"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/PhoneNumberLB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="420dp"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"
-        android:text="@string/PhoneNumberLB"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/PasswordLB"
+        android:id="@+id/ZipcodeLB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="272dp"
         android:textStyle="bold"
         android:textColor="@android:color/white"
-        android:text="@string/PasswordLB"
+        android:text="@string/Zipcode"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/PasswordTF"
+        android:id="@+id/ZipcodeTF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="260dp"
         android:layout_marginEnd="20dp"
         android:textColor="@android:color/white"
         android:ems="10"
-        android:inputType="textPassword"
+        android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/UsernameLB"
+        android:id="@+id/StateLB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="204dp"
         android:textStyle="bold"
         android:textColor="@android:color/white"
-        android:text="@string/UsernameLB"
+        android:text="@string/State"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/LastNameLB"
+        android:id="@+id/CityLB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="132dp"
         android:textStyle="bold"
         android:textColor="@android:color/white"
-        android:text="@string/LastNameLB"
+        android:text="@string/City"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/LastNameTF"
+        android:id="@+id/CityTF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="112dp"
@@ -117,7 +93,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/UsernameTF"
+        android:id="@+id/StateTF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="188dp"
@@ -133,7 +109,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/Title"
+        android:text="@string/TitleRegisterCompany"
         android:textStyle="bold"
         android:textColor="@android:color/white"
         android:textSize="18sp"
@@ -142,19 +118,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/FirstNameLB"
+        android:id="@+id/CompanyNameLB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginTop="56dp"
         android:textStyle="bold"
         android:textColor="@android:color/white"
-        android:text="@string/FirstNameLB"
+        android:text="@string/CompanyName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/FirstNameTF"
+        android:id="@+id/CompanyNameTF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -183,56 +159,19 @@
         android:id="@+id/ContinueButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="83dp"
         android:layout_marginBottom="86dp"
         android:text="@string/ContinueButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ErrorLB"
-        app:layout_constraintStart_toStartOf="@+id/ErrorLB"
-        app:layout_constraintTop_toBottomOf="@+id/CompanyCodeTF" />
+        app:layout_constraintStart_toStartOf="@+id/ErrorLB" />
 
     <TextView
         android:id="@+id/ErrorLB"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ContinueButton" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toStartOf="@+id/CompanyCodeLB"
-        app:layout_constraintStart_toStartOf="@+id/CompanyCodeLB"
-        app:layout_constraintTop_toBottomOf="@+id/PhoneNumberLB" />
-
-    <TextView
-        android:id="@+id/CompanyCodeLB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:text="@string/CompanyCode"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/CompanyCodeTF"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:textColor="@android:color/white"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/CompanyCodeLB"
-        app:layout_constraintEnd_toEndOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

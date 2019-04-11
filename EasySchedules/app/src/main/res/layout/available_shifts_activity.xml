@@ -5,36 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorDarkGrey"
-    tools:context=".AdminHomeActivity">
+    tools:context=".AvailableShifts">
 
-    <TextView
-        android:id="@+id/CompanyMessage"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="526dp"
-        android:gravity="center"
-        android:text="TextView"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView2"
+        android:layout_width="376dp"
+        android:layout_height="456dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="91dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/WelcomeMessage" />
+        app:layout_constraintTop_toBottomOf="@+id/AvailableShifts" />
 
     <TextView
-        android:id="@+id/WelcomeMessage"
+        android:id="@+id/AvailableShifts"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginBottom="560dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="555dp"
         android:gravity="center"
-        android:text="TextView"
+        android:text="@string/AvailableShifts"
         android:textColor="@android:color/white"
+        android:textSize="18dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -46,7 +48,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/WelcomeMessage"
-        app:menu="@menu/admin_nav_items" />
+        app:layout_constraintTop_toBottomOf="@+id/AvailableShifts"
+        app:menu="@menu/schedule_nav_items" />
 
 </android.support.constraint.ConstraintLayout>

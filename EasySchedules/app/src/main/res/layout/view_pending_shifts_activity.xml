@@ -5,48 +5,49 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorDarkGrey"
-    tools:context=".AdminHomeActivity">
+    tools:context=".ViewPendingShiftsActivity">
 
     <TextView
-        android:id="@+id/CompanyMessage"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="526dp"
-        android:gravity="center"
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="57dp"
+        android:layout_marginBottom="7dp"
         android:text="TextView"
         android:textColor="@android:color/white"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/WelcomeMessage" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/PendingShifts" />
 
-    <TextView
-        android:id="@+id/WelcomeMessage"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView3"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginBottom="560dp"
-        android:gravity="center"
-        android:text="TextView"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
+        android:layout_marginStart="52dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="72dp"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+    </android.support.v7.widget.RecyclerView>
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottomNavigationView"
         android:layout_width="0dp"
         android:layout_height="75dp"
-        android:background="@color/colorPrimary"
-        app:itemIconTint="@drawable/bottom_nav_color_selector"
-        app:itemTextColor="@drawable/bottom_nav_color_selector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/WelcomeMessage"
-        app:menu="@menu/admin_nav_items" />
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView3"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="@drawable/bottom_nav_color_selector"
+        app:itemTextColor="@drawable/bottom_nav_color_selector"
+        app:menu="@menu/schedule_nav_items" />
 
 </android.support.constraint.ConstraintLayout>

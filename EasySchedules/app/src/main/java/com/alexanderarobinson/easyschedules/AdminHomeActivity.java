@@ -29,6 +29,8 @@ public class AdminHomeActivity extends AppCompatActivity {
         final String username = intent.getStringExtra("username");
         final String company_name = intent.getStringExtra("company_name");
         final int permission_level = intent.getIntExtra("permission_level", -1);
+        final int company_id = intent.getIntExtra("company_id", -1);
+        final String id = user_id+"";
 
         //Change bottom nav bar button to clicked as home
         bottomNavigationView = (BottomNavigationView) findViewById(R.id.bottomNavigationView);
@@ -47,11 +49,16 @@ public class AdminHomeActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()) {
                     case R.id.createSchedule:
                         final Intent intent = new Intent(AdminHomeActivity.this, SelectScheduleActivity.class);
+                        intent.putExtra("company_id", company_id);
                         AdminHomeActivity.this.startActivity(intent);
                         return true;
                     case R.id.home:
                         return true;
                     case R.id.connect:
+                        final Intent intent1 = new Intent(AdminHomeActivity.this, Connect.class);
+                        intent1.putExtra("company_id", company_id);
+                        intent1.putExtra("id", id);
+                        AdminHomeActivity.this.startActivity(intent1);
                         return true;
                     default:
                         return false;

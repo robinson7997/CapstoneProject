@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".RegisterOwnerActivity"
     android:background="@color/colorDarkGrey"
-    tools:context=".RegisterActivity"
     tools:layout_editor_absoluteY="81dp">
 
     <EditText
         android:id="@+id/PhoneNumberTF"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="396dp"
+        android:layout_marginTop="404dp"
         android:layout_marginEnd="20dp"
-        android:textColor="@android:color/white"
         android:ems="10"
         android:inputType="textPersonName|phone"
+        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="328dp"
         android:layout_marginEnd="20dp"
+        android:textStyle="bold"
         android:textColor="@android:color/white"
         android:ems="10"
         android:inputType="textEmailAddress"
@@ -74,8 +75,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="260dp"
         android:layout_marginEnd="20dp"
-        android:textColor="@android:color/white"
         android:ems="10"
+        android:textColor="@android:color/white"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -133,7 +134,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/Title"
+        android:text="@string/TitleBusinessOwner"
         android:textStyle="bold"
         android:textColor="@android:color/white"
         android:textSize="18sp"
@@ -183,13 +184,11 @@
         android:id="@+id/ContinueButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="83dp"
         android:layout_marginBottom="86dp"
         android:text="@string/ContinueButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/ErrorLB"
-        app:layout_constraintStart_toStartOf="@+id/ErrorLB"
-        app:layout_constraintTop_toBottomOf="@+id/CompanyCodeTF" />
+        app:layout_constraintStart_toStartOf="@+id/ErrorLB" />
 
     <TextView
         android:id="@+id/ErrorLB"
@@ -200,39 +199,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ContinueButton" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"
-        app:layout_constraintEnd_toStartOf="@+id/CompanyCodeLB"
-        app:layout_constraintStart_toStartOf="@+id/CompanyCodeLB"
-        app:layout_constraintTop_toBottomOf="@+id/PhoneNumberLB" />
-
-    <TextView
-        android:id="@+id/CompanyCodeLB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:text="@string/CompanyCode"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintStart_toStartOf="@+id/guideline"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
-
-    <EditText
-        android:id="@+id/CompanyCodeTF"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:textColor="@android:color/white"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintBaseline_toBaselineOf="@+id/CompanyCodeLB"
-        app:layout_constraintEnd_toEndOf="parent" />
 
 </android.support.constraint.ConstraintLayout>

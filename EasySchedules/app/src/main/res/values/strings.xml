@@ -31,6 +31,7 @@
     <string name="nav_home">Home</string>
     <string name="nav_schedule">Schedule</string>
     <string name="nav_connect">Connect</string>
+    <string name="nav_dms">Direct Message</string>
     <string name="availableshifts">Available Shifts</string>
     <string name="CreateSchedule">Create Schedules</string>
     <string name="ManageEmployees">Manage Employees</string>
@@ -48,5 +49,21 @@
     <string name="SelectMonth">Select Month</string>
     <string name="SelectDay">Select Day</string>
     <string name="SelectDate">Select Date</string>
-
+    <string name="AvailableShifts">Available Shifts</string>
+    <string name="TitleBusinessOwner">Create a business owner account</string>
+    <string name="TitleRegisterCompany">Register Company Information</string>
+    <string name="CompanyName">Company Name</string>
+    <string name="City">City</string>
+    <string name="State">State</string>
+    <string name="Zipcode">Zipcode</string>
+    <string name="TypeOfBusiness">Type of Business</string>
+    <string name="GeneratedCompanyCode">Company Code</string>
+    <string name="SubmitButton">Submit</string>
+    <string name="CompanyNameLB">Company name label</string>
+    <string name="PendingShifts">Pending Shifts</string>
+    <string name="PendingShift">Pending Shift</string>
+    <string name="CreateMessage">Create Message</string>
+    <string name="ViewMessageWall">View Message Wall</string>
+    <string name="customjobtitles">Custom Job Titles</string>
+    <string name="CreateCustomJobTitles">Create Custom Job Titles</string>
 </resources>

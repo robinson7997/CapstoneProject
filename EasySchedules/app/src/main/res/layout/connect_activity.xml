@@ -5,36 +5,36 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorDarkGrey"
-    tools:context=".AdminHomeActivity">
+    tools:context=".Connect">
 
-    <TextView
-        android:id="@+id/CompanyMessage"
+    <Button
+        android:id="@+id/CCJTButton"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="526dp"
-        android:gravity="center"
-        android:text="TextView"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/WelcomeMessage" />
-
-    <TextView
-        android:id="@+id/WelcomeMessage"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginBottom="560dp"
-        android:gravity="center"
-        android:text="TextView"
-        android:textColor="@android:color/white"
-        android:textStyle="bold"
+        android:layout_marginStart="22dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="406dp"
+        android:text="@string/CreateCustomJobTitles"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/MCButton"
+        tools:text="@string/CreateCustomJobTitles" />
+
+    <Button
+        android:id="@+id/MCButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="76dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="26dp"
+        android:text="@string/ViewMessageWall"
+        app:layout_constraintBottom_toTopOf="@+id/CCJTButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/ViewMessageWall" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -45,8 +45,9 @@
         app:itemTextColor="@drawable/bottom_nav_color_selector"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/WelcomeMessage"
+        app:layout_constraintTop_toBottomOf="@+id/CCJTButton"
+        app:layout_constraintVertical_bias="1.0"
         app:menu="@menu/admin_nav_items" />
-
 </android.support.constraint.ConstraintLayout>

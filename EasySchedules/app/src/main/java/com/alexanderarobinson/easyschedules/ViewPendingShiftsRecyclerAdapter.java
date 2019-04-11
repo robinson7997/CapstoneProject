@@ -15,19 +15,25 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.List;
 
-public class ViewScheduleRecyclerAdapter extends RecyclerView.Adapter<ViewScheduleRecyclerAdapter.MyViewHolder> {
+public class ViewPendingShiftsRecyclerAdapter extends RecyclerView.Adapter<ViewPendingShiftsRecyclerAdapter.MyViewHolder> {
 
     private List<String> list;
-    private List<Integer> id;
-    private List<Integer> shift_posted;
+    private List<String> date;
+    private List<String> shift_user;
+    private List<String> picking_up_user;
+    private List<Integer> shift_id;
+    private List<Integer> user_id;
     private Context context;
 
 
-    public ViewScheduleRecyclerAdapter(List<String> list,List<Integer> id, List<Integer> shift_posted, Context context) {
+    public ViewPendingShiftsRecyclerAdapter(List<String> list,List<String> date,List<String> shift_user, List<String> picking_up_user, List<Integer>shift_id, List<Integer>user_id,Context context) {
         this.list = list;
-        this.id = id;
-        this.shift_posted = shift_posted;
+        this.date = date;
+        this.shift_user = shift_user;
+        this.picking_up_user = picking_up_user;
         this.context = context;
+        this.shift_id = shift_id;
+        this.user_id = user_id;
     }
 
 
@@ -36,10 +42,8 @@ public class ViewScheduleRecyclerAdapter extends RecyclerView.Adapter<ViewSchedu
 
         Context context = parent.getContext();
         LayoutInflater inflater = LayoutInflater.from(context);
-
-
         //Inflate the custom layout
-        View scheduleView = inflater.inflate(R.layout.view_schedule_text_view_layout, parent, false);
+        View scheduleView = inflater.inflate(R.layout.view_pending_shifts_text_view_layout, parent, false);
 
         // Return a new holder instance
         MyViewHolder viewHolder = new MyViewHolder(scheduleView);
@@ -48,21 +52,24 @@ public class ViewScheduleRecyclerAdapter extends RecyclerView.Adapter<ViewSchedu
 
     @Override
     public void onBindViewHolder(final MyViewHolder holder, final int position) {
+        holder.Date.setText(date.get(position));
         holder.Schedule.setText(list.get(position));
-        Button button = holder.DropShift;
-        final String stringId =  id.get(position)+"";
-        final String shift_posted_string = shift_posted.get(position)+"";
-        int num = Integer.parseInt(shift_posted_string );
-        if(num == 1){
-            button.setText("Drop");
-        }else{
-            button.setText("Posted");
-        }
+        holder.ShiftUser.setText(shift_user.get(position));
+        holder.PickingUpUser.setText(picking_up_user.get(position));
+        //Shift id
+        final int id = shift_id.get(position);
+        final String stringId = id+"";
+
+        final int userId = user_id.get(position);
+        final String stringUserId = userId+"";
+
+
+        Button button = holder.AcceptShift;
+        button.setText("Accept");
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                System.out.println(stringId);
+            public void onClick(View v) { ;
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
 
@@ -78,18 +85,21 @@ public class ViewScheduleRecyclerAdapter extends RecyclerView.Adapter<ViewSchedu
                                 System.out.println("did not work");
                             }
                         }catch(JSONException e){
-                        e.printStackTrace();
+                            e.printStackTrace();
                         }
                     }
 
                 };
 
-                //Add user data from text fields for login request and add to queue
-                DropShiftRequest loginRequest = new DropShiftRequest(stringId, responseListener);
+                //Add shift id, user id, shift user id, and company id
+                AcceptShiftRequest acceptShiftRequest = new   AcceptShiftRequest(stringUserId,stringId, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(context);
-                queue.add(loginRequest);
+                queue.add(acceptShiftRequest);
+
+
             }
         });
+
     }
 
     // Returns the total count of items in the list
@@ -99,15 +109,21 @@ public class ViewScheduleRecyclerAdapter extends RecyclerView.Adapter<ViewSchedu
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
+        TextView Date;
         TextView Schedule;
-        Button DropShift;
+        TextView ShiftUser;
+        TextView PickingUpUser;
+        Button AcceptShift;
 
         public MyViewHolder(View itemView) {
 
             super(itemView);
 
+            Date = (TextView) itemView.findViewById(R.id.date);
             Schedule = (TextView) itemView.findViewById(R.id.schedule);
-            DropShift = (Button) itemView.findViewById(R.id.dropShift);
+            ShiftUser = (TextView) itemView.findViewById(R.id.shift_user);
+            PickingUpUser = (TextView) itemView.findViewById(R.id.picking_up_user);
+            AcceptShift = (Button) itemView.findViewById(R.id.acceptShift);
 
         }
     }
