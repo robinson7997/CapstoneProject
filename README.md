@@ -10,7 +10,7 @@
     <h1>Logical Architecture</h1>
         <img src="https://github.com/robinson7997/CapstoneProject/blob/master/img/Logical%20Architecture.png" alt="Italian Trulli">
     <h1>Physical Architecture</h1> 
-          <img src="https://github.com/robinson7997/CapstoneProject/blob/master/img/Physical%20Architecture.png" alt="Italian Trulli"
+          <img src="https://github.com/robinson7997/CapstoneProject/blob/master/img/Physical%20Architecture.png" alt="Italian Trulli">
     <h1>Deployment Diagram</h1>
     <h1>Database</h1>
     <h1>Conclusion</h1>
