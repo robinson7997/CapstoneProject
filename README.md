@@ -5,7 +5,9 @@
     </head>
     <body>
     <h1>Abstract</h1>
-        <p>test</p>
+        <p>Easy Schedules is an Android application that is a solution for any 
+            business that needs help creating, and managing work 
+            schedules from the convenience of a smartphone or tablet device.</p>
     <h1>Video</h1>
     <h1>Logical Architecture</h1>
     <h1>Physical Architecture</h1> 
