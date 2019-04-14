@@ -22,7 +22,7 @@
    <h1>Code Snippets</h1>
     <h1>Future ideas</h1>
         <ul>
-        <li>Direct Messaging: Allow  allow users to communicate directly with eachother through direct messaging. </li>
+        <li>Direct Messaging: Allow users to communicate directly with each other through direct messaging. </li>
         <li>Upload Profile Image: Allow users to upload profile picture to their AVI.</li>
         <li>Request Time Off: Allow users to request time off directly through the application.</li>
         </ul>  
