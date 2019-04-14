@@ -20,8 +20,8 @@
        <center><img src="https://github.com/robinson7997/CapstoneProject/blob/master/img/ER%20diagram.png" alt="Italian Trulli"></center>
     <h1>Sitemap</h1>
         <center><img src="https://github.com/robinson7997/CapstoneProject/blob/master/img/Sitemap.png" alt="Italian Trulli"></center>
-   <h1>UML Diagrams</h1>
-             <center Click <a href="https://github.com/robinson7997/CapstoneProject/blob/master/docs/ClassDiagram.md">here</a></center>
+   <h1>Class Diagrams</h1>
+             <center> Classes used <a href="https://github.com/robinson7997/CapstoneProject/blob/master/docs/ClassDiagram.md">here</a></center>
     <h1>Future ideas</h1>
         <ul>
         <li>Direct Messaging: Allow users to communicate directly with each other through direct messaging. </li>
