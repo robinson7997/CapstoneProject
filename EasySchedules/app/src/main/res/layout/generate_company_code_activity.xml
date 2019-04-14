@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorDarkGrey"
-    tools:context=".GenerateCompanyCodeActivity">
+    tools:context=".activity.GenerateCompanyCodeActivity">
 
     <TextView
         android:id="@+id/CompanyNameLB"

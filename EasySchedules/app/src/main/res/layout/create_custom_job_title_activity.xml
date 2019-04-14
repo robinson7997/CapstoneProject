@@ -5,20 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorDarkGrey"
-    tools:context=".activity.ViewMessageWallActivity">
+    tools:context=".activity.CreateCustomJobTitleActivity">
 
-    <EditText
-        android:id="@+id/MessageTF"
+    <TextView
+        android:id="@+id/textView"
         android:layout_width="0dp"
-        android:layout_height="89dp"
-        android:layout_marginTop="7dp"
-        android:ems="10"
-        android:inputType="textMultiLine"
-        android:background="@color/colorPrimary"
+        android:layout_height="0dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginBottom="12dp"
+        android:gravity="center"
+        android:text="@string/CustomJobTitles"
         android:textColor="@android:color/white"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/jobTitleTF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView4" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottomNavigationView"
@@ -30,29 +33,31 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/connect_nav_items"
-        app:layout_constraintTop_toBottomOf="@+id/AddMessageButton" />
+        app:layout_constraintTop_toBottomOf="@+id/submitButton"
+        app:menu="@menu/assign_job_titles_nav_items" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView4"
+    <EditText
+        android:id="@+id/jobTitleTF"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginBottom="95dp"
-        app:layout_constraintBottom_toTopOf="@+id/AddMessageButton"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="7dp"
+        android:layout_marginBottom="9dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/submitButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/AddMessageButton"
+        android:id="@+id/submitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="75dp"
-        android:text="@string/CreateMessage"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/recyclerView4" />
-
+        android:layout_marginBottom="415dp"
+        android:text="Submit"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
+        app:layout_constraintEnd_toEndOf="@+id/jobTitleTF"
+        app:layout_constraintStart_toStartOf="@+id/jobTitleTF"
+        app:layout_constraintTop_toBottomOf="@+id/jobTitleTF" />
 </android.support.constraint.ConstraintLayout>

@@ -38,7 +38,7 @@
     <string name="ManageCompany">Manage Company</string>
     <string name="CurrentWeek">Current Weeks Schedule</string>
     <string name="NextWeek">Upcoming Weeks Schedule</string>
-    <string name="CreateScheduleTitle">Create new shift for current weeks schedule</string>
+    <string name="CreateScheduleTitle">Create new shift for schedule</string>
     <string name="UserID">Employees ID</string>
     <string name="Month">Month</string>
     <string name="Day">Day</string>
@@ -66,4 +66,10 @@
     <string name="ViewMessageWall">View Message Wall</string>
     <string name="customjobtitles">Custom Job Titles</string>
     <string name="CreateCustomJobTitles">Create Custom Job Titles</string>
+    <string name="CustomJobTitles">Create Custom Job Titles</string>
+    <string name="AssignJobTitle">Assign Job Titles</string>
+    <string name="AssignButton">Assign</string>
+    <string name="JobTitle">Job Title</string>
+    <string name="User"> Users </string>
+
 </resources>

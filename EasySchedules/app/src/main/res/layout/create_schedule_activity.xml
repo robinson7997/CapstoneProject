@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorDarkGrey"
-    tools:context=".RegisterActivity"
+    tools:context=".activity.CreateScheduleActivity"
     tools:layout_editor_absoluteY="81dp">
 
     <TextView
@@ -18,8 +18,8 @@
         android:layout_marginBottom="7dp"
         android:gravity="center"
         android:text="@string/EndTime"
-        android:textStyle="bold"
         android:textColor="@android:color/white"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/EndTimeTF"
         app:layout_constraintEnd_toStartOf="@+id/EndTimeTF"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,15 +30,17 @@
         android:layout_width="0dp"
         android:layout_height="26dp"
         android:layout_marginStart="23dp"
+        android:layout_marginTop="215dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="215dp"
         android:gravity="center"
         android:text="@string/StartTime"
-        android:textStyle="bold"
         android:textColor="@android:color/white"
-        app:layout_constraintBottom_toTopOf="@+id/EndTimeLB"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toStartOf="@+id/StartTimeTF"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/SelectDateButton" />
 
     <TextView
         android:id="@+id/DayLB"
@@ -49,9 +51,9 @@
         android:layout_marginBottom="145dp"
         android:gravity="center"
         android:text="@string/Day"
-        android:textStyle="bold"
         android:textColor="@android:color/white"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/EndTimeTF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/MonthLB"
@@ -65,23 +67,23 @@
         android:layout_marginEnd="5dp"
         android:gravity="center"
         android:text="@string/Month"
-        android:textStyle="bold"
         android:textColor="@android:color/white"
         android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/DayLB"
         app:layout_constraintEnd_toStartOf="@+id/DayLB"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/CreateShiftTitle"
-        android:layout_width="387dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="43dp"
+        android:layout_width="262dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="44dp"
         android:text="@string/CreateScheduleTitle"
-        android:textStyle="bold"
         android:textColor="@android:color/white"
         android:textSize="18sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -92,8 +94,8 @@
         android:layout_marginStart="31dp"
         android:layout_marginTop="134dp"
         android:text="@string/UserID"
-        android:textStyle="bold"
         android:textColor="@android:color/white"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/guideline"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -103,9 +105,9 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:ems="10"
+        android:gravity="center"
         android:inputType="textPersonName"
         android:textColor="@android:color/white"
-        android:gravity="center"
         app:layout_constraintBaseline_toBaselineOf="@+id/EmployeeIdLB"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -127,18 +129,9 @@
         android:id="@+id/SubmitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="41dp"
         android:text="@string/Submit"
-        app:layout_constraintBottom_toTopOf="@+id/ErrorLB"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/ErrorLB"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="46dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -156,13 +149,13 @@
         android:id="@+id/EndTimeTF"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="57dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="4dp"
         android:text="@string/EndTime"
         android:textSize="30sp"
-        app:layout_constraintBottom_toTopOf="@+id/SubmitButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/EndTimeLB" />
+        app:layout_constraintStart_toEndOf="@+id/EndTimeLB"
+        app:layout_constraintTop_toBottomOf="@+id/StartTimeTF" />
 
     <Button
         android:id="@+id/SelectDateButton"
@@ -173,5 +166,18 @@
         android:text="@string/SelectDate"
         app:layout_constraintStart_toEndOf="@+id/EmployeeIdLB"
         app:layout_constraintTop_toBottomOf="@+id/EmployeeIdTF" />
+
+    <android.support.design.widget.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="0dp"
+        android:layout_height="75dp"
+        android:background="@color/colorPrimary"
+        app:itemIconTint="@drawable/bottom_nav_color_selector"
+        app:itemTextColor="@drawable/bottom_nav_color_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/admin_schedule_items" />
 
 </android.support.constraint.ConstraintLayout>

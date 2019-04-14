@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorDarkGrey"
-    tools:context=".ViewPendingShiftsActivity">
+    tools:context=".activity.ViewPendingShiftsActivity">
 
     <TextView
         android:id="@+id/title"
@@ -48,6 +48,6 @@
         android:background="@color/colorPrimary"
         app:itemIconTint="@drawable/bottom_nav_color_selector"
         app:itemTextColor="@drawable/bottom_nav_color_selector"
-        app:menu="@menu/schedule_nav_items" />
+        app:menu="@menu/admin_schedule_items" />
 
 </android.support.constraint.ConstraintLayout>

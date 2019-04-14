@@ -11,33 +11,34 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ViewMessageWallAdmin"></activity>
-        <activity android:name=".Connect" />
-        <activity android:name=".ViewMessageWallActivity" />
-        <activity android:name=".ViewPendingShiftsActivity" />
-        <activity android:name=".GenerateCompanyCodeActivity" />
-        <activity android:name=".RegisterCompanyInfoActivity" />
-        <activity android:name=".RegisterOwnerActivity" />
-        <activity android:name=".AvailableShifts" />
-        <activity android:name=".SelectScheduleActivity" />
-        <activity android:name=".CreateScheduleActivity" />
-        <activity android:name=".AdminHomeActivity" />
-        <activity android:name=".ViewScheduleActivity" />
-        <activity android:name=".RegisterActivity">
+        <activity android:name=".activity.AssignCustomJobTitlesActivity"/>
+        <activity android:name=".activity.CreateCustomJobTitleActivity" />
+        <activity android:name=".activity.ViewMessageWallAdminActivity" />
+        <activity android:name=".activity.ConnectActivity" />
+        <activity android:name=".activity.ViewMessageWallActivity" />
+        <activity android:name=".activity.ViewPendingShiftsActivity" />
+        <activity android:name=".activity.GenerateCompanyCodeActivity" />
+        <activity android:name=".activity.RegisterCompanyInfoActivity" />
+        <activity android:name=".activity.RegisterOwnerActivity" />
+        <activity android:name=".activity.AvailableShiftsActivity" />
+        <activity android:name=".activity.CreateScheduleActivity" />
+        <activity android:name=".activity.AdminHomeActivity" />
+        <activity android:name=".activity.ViewScheduleActivity" />
+        <activity android:name=".activity.RegisterActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity">
+        <activity android:name=".activity.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".activity.HomeActivity" />
     </application>
 
 </manifest>

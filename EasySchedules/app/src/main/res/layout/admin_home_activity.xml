@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorDarkGrey"
-    tools:context=".AdminHomeActivity">
+    tools:context=".activity.AdminHomeActivity">
 
     <TextView
         android:id="@+id/CompanyMessage"
@@ -14,6 +14,7 @@
         android:layout_marginBottom="526dp"
         android:gravity="center"
         android:text="TextView"
+        android:textSize="32dp"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -29,6 +30,7 @@
         android:layout_marginBottom="560dp"
         android:gravity="center"
         android:text="TextView"
+        android:textSize="24dp"
         android:textColor="@android:color/white"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/bottomNavigationView"
