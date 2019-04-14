@@ -21,5 +21,11 @@
         <center><img src="https://github.com/robinson7997/CapstoneProject/blob/master/img/Sitemap.png" alt="Italian Trulli"></center>
    <h1>Code Snippets</h1>
     <h1>Future ideas</h1>
+        <ul>
+        <li>Direct Messaging: Allow users to direct message coworkers in their company. This functionality would allow 
+            employees to communicate directly with eachother. </li>
+        <li>Upload Profile Image:Allow users to upload profile picture to their AVI.</li>
+        <li>Request Time Off: Allow users to request time off directly through the application.</li>
+        </ul>  
     <body>
 </html>
