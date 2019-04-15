@@ -29,5 +29,7 @@
         <li>Upload Profile Image: Allow users to upload profile picture to their AVI.</li>
         <li>Request Time Off: Allow users to request time off directly through the application.</li>
         </ul>  
+            
+    <h1>Test</h1>
     </body>
 </html>
