@@ -10,6 +10,9 @@
     <iframe width="420" height="315"
     src="https://www.loom.com/share/bd61c7b74239492485cedac7dda89745">
     </iframe>
+        <object width="420" height="315"
+    data="https://www.loom.com/share/bd61c7b74239492485cedac7dda89745">
+    </object>
     <h1>Overview</h1>
         <p>This purpose of this project was to gain mobile application development experience. To do this I made a Android application
          using Android Studios. I utilized technologies that I learned through my major at GCU such as Java, PHP, and MySQL. This       application will allow employees to simply view and manage their work schedule from an Android smartphone or tablet device.  </p>
